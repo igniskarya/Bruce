@@ -274,13 +274,13 @@ static const uint8_t SCL = GROVE_SCL;
 // #define FM_RSTPIN 40
 
 // RGB LED
-#define HAS_RGB_LED
+#define HAS_RGB_LED 1
 #define RGB_LED 42
 #define RGB_LED_CLK 45
 #define LED_TYPE APA102
 #define LED_ORDER BGR
-#define LED_TYPE_IS_RGBW 0
-#define LED_COUNT 8
+#define LED_TYPE_IS_RGBW 1
+#define LED_COUNT 7
 
 // BadUSB
 #define USB_as_HID 1

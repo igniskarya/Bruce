@@ -5,7 +5,7 @@
 
 class WifiMenu : public MenuItemInterface {
 public:
-    WifiMenu() : MenuItemInterface("WiFi TES") {}
+    WifiMenu() : MenuItemInterface("WiFi TES1") {}
 
     void optionsMenu(void);
     void drawIcon(float scale);

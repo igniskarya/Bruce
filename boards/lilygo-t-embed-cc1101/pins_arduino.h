@@ -281,7 +281,7 @@ static const uint8_t SCL = GROVE_SCL;
 #define LED_ORDER BGR
 #define LED_TYPE_IS_RGBW 0
 #define LED_COUNT 7
-CRGB leds[LED_COUNT];
+
 
 // BadUSB
 #define USB_as_HID 1

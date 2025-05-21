@@ -168,8 +168,8 @@ static const uint8_t RX = SERIAL_RX;
 #define SPI_SCK_PIN 40
 static const uint8_t SS = SPI_SS_PIN;
 static const uint8_t MOSI = SPI_MOSI_PIN;
-static const uint8_t SCK = SPI_MISO_PIN;
-static const uint8_t MISO = SPI_SCK_PIN;
+static const uint8_t SCK = SPI_SCK_PIN;
+static const uint8_t MISO = SPI_MISO_PIN;
 
 // Set Main I2C Bus
 #define GROVE_SDA 44
@@ -216,8 +216,8 @@ static const uint8_t SCL = GROVE_SCL;
 
 // NRF24 - Over QWIIC Port #
 #define USE_NRF24_VIA_SPI
-#define NRF24_CE_PIN 44
-#define NRF24_SS_PIN 43
+#define NRF24_CE_PIN 43
+#define NRF24_SS_PIN 44
 #define NRF24_MOSI_PIN SDCARD_MOSI
 #define NRF24_SCK_PIN SDCARD_SCK
 #define NRF24_MISO_PIN SDCARD_MISO
@@ -278,8 +278,8 @@ static const uint8_t SCL = GROVE_SCL;
 #define RGB_LED 42
 #define RGB_LED_CLK 45
 #define LED_TYPE APA102
-#define LED_ORDER RGB
-#define LED_TYPE_IS_RGBW 0
+#define LED_ORDER BGR
+//#define LED_TYPE_IS_RGBW 0
 #define LED_COUNT 8
 
 // BadUSB

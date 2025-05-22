@@ -82,7 +82,9 @@ void colorWheelTask(void *pvParameters) {
 
 void beginLed() {
 #ifdef RGB_LED_CLK
-    FastLED.addLeds<LED_TYPE, RGB_LED, RGB_LED_CLK, LED_ORDER>(leds, LED_COUNT);
+    //FastLED.addLeds<LED_TYPE, RGB_LED, RGB_LED_CLK, LED_ORDER>(leds, LED_COUNT);
+      FastLED.addLeds<LED_TYPE, RGB_LED, RGB_LED_CLK, LED_ORDER>(leds, LED_COUNT).setCorrection(TypicalLEDStrip);
+   FastLED.setBrightness(96);
 #else
     FastLED.addLeds<LED_TYPE, RGB_LED, LED_ORDER>(leds, LED_COUNT); // Initialize the LED Object. Only 1 LED.
 #endif

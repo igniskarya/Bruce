@@ -216,8 +216,8 @@ static const uint8_t SCL = GROVE_SCL;
 
 // NRF24 - Over QWIIC Port #
 #define USE_NRF24_VIA_SPI
-#define NRF24_CE_PIN 44
-#define NRF24_SS_PIN 43
+#define NRF24_CE_PIN 43
+#define NRF24_SS_PIN 44
 #define NRF24_MOSI_PIN SDCARD_MOSI
 #define NRF24_SCK_PIN SDCARD_SCK
 #define NRF24_MISO_PIN SDCARD_MISO
@@ -279,7 +279,7 @@ static const uint8_t SCL = GROVE_SCL;
 #define RGB_LED_CLK 45
 #define LED_TYPE APA102
 #define LED_ORDER BGR
-//#define LED_TYPE_IS_RGBW 0
+#define LED_TYPE_IS_RGBW 0
 #define LED_COUNT 7
 
 // BadUSB

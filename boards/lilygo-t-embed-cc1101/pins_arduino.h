@@ -193,7 +193,7 @@ static const uint8_t SCL = GROVE_SCL;
 #define TFT_DC 13
 #define TFT_RST 9
 #define TOUCH_CS -1
-#define SPI_FREQUENCY 40000000
+#define SPI_FREQUENCY 80000000
 #define SPI_READ_FREQUENCY 20000000
 #define SPI_TOUCH_FREQUENCY 2500000
 
@@ -274,11 +274,11 @@ static const uint8_t SCL = GROVE_SCL;
 // #define FM_RSTPIN 40
 
 // RGB LED
-#define HAS_RGB_LED
+#define HAS_RGB_LED 1
 #define RGB_LED 42
 #define RGB_LED_CLK 45
 #define LED_TYPE APA102
-#define LED_ORDER RGB
+#define LED_ORDER BGR
 #define LED_TYPE_IS_RGBW 0
 #define LED_COUNT 8
 

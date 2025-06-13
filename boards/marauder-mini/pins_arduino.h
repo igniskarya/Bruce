@@ -66,7 +66,7 @@ static const uint8_t ADC2 = 8;
 #define L_BTN 13
 #define HAS_5_BUTTONS
 #define BTN_ALIAS "\"Ok\""
-#define BTN_ACT HIGH
+#define BTN_ACT LOW
 
 #define LED -1
 #define LED_ON HIGH

@@ -154,11 +154,11 @@ static const uint8_t MISO = SPI_SCK_PIN;
 // RGB LED
 
 #define HAS_RGB_LED 1
-#define RGB_LED 16
+#define RGB_LED 17
 #define LED_TYPE WS2812B
 #define LED_ORDER GRB
 #define LED_TYPE_IS_RGBW 0
-#define LED_COUNT 16
+#define LED_COUNT 8
 #define LED_COLOR_STEP 15
 
 // Mic

@@ -234,7 +234,7 @@ static const uint8_t SCL = GROVE_SCL;
 // CC1101#
 
 #define GD03_PIN 43
-#defibe GD04_PIN 44
+#define GD04_PIN 44
 
 #define USE_CC1101_VIA_SPI
 #define CC1101_SW1_PIN GD03_PIN

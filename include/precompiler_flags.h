@@ -177,7 +177,7 @@
 #endif
 
 #ifndef BTN_ACT
-#define BTN_ACT HIGH
+#define BTN_ACT LOW
 #endif
 
 #ifndef SMOOTH_FONT

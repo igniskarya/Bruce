@@ -51,43 +51,37 @@ void _setBrightness(uint8_t brightval) {
 ** Function: InputHandler
 ** Handles the variables PrevPress, NextPress, SelPress, AnyKeyPress and EscPress
 **********************************************************************/
-void InputHandler(void) {
-    static unsigned long tm = millis();
-    static unsigned long esc_tm = millis();
-    static bool esc_armed = false;
-    if (!(millis() - tm > 200 || LongPress)) return;
 
-    bool u = digitalRead(UP_BTN);
-    bool d = digitalRead(DW_BTN);
-    bool r = digitalRead(R_BTN);
-    bool l = digitalRead(L_BTN);
-    bool s = digitalRead(SEL_BTN);
-    if (!s || !u || !d || !r || !l) {
+void InputHandler(void) {
+    static unsigned long tm = 0;
+    if (millis() - tm < 200 && !LongPress) return;
+    bool _u = digitalRead(UP_BTN);
+    bool _d = digitalRead(DW_BTN);
+    bool _l = digitalRead(L_BTN);
+    bool _r = digitalRead(R_BTN);
+    bool _s = digitalRead(SEL_BTN);
+
+    if (!_s || !_u || !_d || !_r || !_l) {
         tm = millis();
         if (!wakeUpScreen()) AnyKeyPress = true;
         else return;
     }
-    if (!l && !s) {
+    if (!_l) { PrevPress = true; }
+    if (!_r) { NextPress = true; }
+    if (!_u) {
+        UpPress = true;
+        PrevPagePress = true;
+    }
+    if (!_d) {
+        DownPress = true;
+        NextPagePress = true;
+    }
+    if (!_s) { SelPress = true; }
+    if (!_l && !_r) {
         EscPress = true;
-        return;
-    }
-    if (!l) {
-        PrevPress = true;
-        if (esc_armed == false) {
-            esc_tm = millis();
-            esc_armed = true;
-        }
-    }
-    if (esc_armed && millis() - esc_tm > 1000) {
-        esc_armed = false;
-        esc_tm = millis();
+        NextPress = false;
         PrevPress = false;
-        EscPress = true;
     }
-    if (!r) NextPress = true;
-    if (!u) UpPress = true;
-    if (!d) DownPress = true;
-    if (!s) SelPress = true;
 }
 
 /*********************************************************************

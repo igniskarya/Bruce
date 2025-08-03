@@ -68,6 +68,16 @@ static const uint8_t ADC2 = 8;
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
 
+// RGB LED
+
+#define HAS_RGB_LED 1
+#define RGB_LED 25
+#define LED_TYPE WS2812B
+#define LED_ORDER GRB
+#define LED_TYPE_IS_RGBW 0
+#define LED_COUNT 16
+#define LED_COLOR_STEP 15
+
 #define LED -1
 #define LED_ON HIGH
 #define LED_OFF LOW
@@ -99,6 +109,8 @@ static const uint8_t ADC2 = 8;
 
 #define GROVE_SDA 33
 #define GROVE_SCL 26
+
+
 
 #define SPI_SCK_PIN 18
 #define SPI_MISO_PIN 19

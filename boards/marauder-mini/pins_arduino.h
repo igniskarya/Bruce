@@ -49,7 +49,7 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-#define RGB_LED 21
+//#define RGB_LED 21
 
 #define BAD_TX 21
 #define BAD_RX 22

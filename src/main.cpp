@@ -216,7 +216,7 @@ void begin_tft() {
  *********************************************************************/
 void boot_screen() {
     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
-    tft.setTextSize(FM);
+    tft.setTextSize(2);
     tft.drawPixel(0, 0, bruceConfig.bgColor);
     tft.drawCentreString("DOYA ViVO", tftWidth / 2, 10,1);
     tft.setTextSize(FP);
@@ -515,6 +515,7 @@ void loop() {
     vTaskDelay(10 / portTICK_PERIOD_MS);
 }
 #endif
+
 
 
 

@@ -63,8 +63,8 @@ static const uint8_t ADC2 = 8;
 #define BAD_RX 22
 
 // SERIAL (GPS) dedicated pins
-#define SERIAL_TX 21
-#define SERIAL_RX 22
+#define GPS_SERIAL_TX 21
+#define GPS_SERIAL_RX 22
 
 #define HAS_BTN 1
 #define SEL_BTN 34

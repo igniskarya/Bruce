@@ -220,7 +220,7 @@ void boot_screen() {
     tft.drawPixel(0, 0, bruceConfig.bgColor);
     tft.drawCentreString("DOYA ViVO", tftWidth / 2, 10,1);
     tft.setTextSize(FP);
-    tft.drawCentreString("Marauder Mini", tftWidth / 2, 25, 1);
+    tft.drawCentreString("SMOOCHIE BOARD", tftWidth / 2, 25, 1);
     tft.setTextSize(FM);
     tft.drawCentreString(
         "PREDATORY FIRMWARE", tftWidth / 2, tftHeight + 2, 1
@@ -515,6 +515,7 @@ void loop() {
     vTaskDelay(10 / portTICK_PERIOD_MS);
 }
 #endif
+
 
 
 

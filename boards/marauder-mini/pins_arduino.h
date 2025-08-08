@@ -81,17 +81,18 @@ static const uint8_t ADC2 = 8;
 #define LED_ON HIGH
 #define LED_OFF LOW
 
+#define CC1101_GDO2_PIN 27
 #define CC1101_GDO0_PIN 15
 #define CC1101_SS_PIN 14
 #define CC1101_MOSI_PIN SPI_MOSI_PIN
 #define CC1101_SCK_PIN SPI_SCK_PIN
 #define CC1101_MISO_PIN SPI_MISO_PIN
 
-#define NRF24_CE_PIN 22
-#define NRF24_SS_PIN 27
+//#define NRF24_CE_PIN 22
+//#define NRF24_SS_PIN 27
 
-//#define NRF24_CE_PIN 21
-//#define NRF24_SS_PIN 14
+#define NRF24_CE_PIN 21
+#define NRF24_SS_PIN 14
 #define NRF24_MOSI_PIN SPI_MOSI_PIN
 #define NRF24_SCK_PIN SPI_SCK_PIN
 #define NRF24_MISO_PIN SPI_MISO_PIN

@@ -87,7 +87,7 @@
 #endif
 
 #ifndef GPS_SERIAL_RX // Serial RX used just for GPS communications
-  #define GPS_SERIAL_RX SERIAL RX
+  #define GPS_SERIAL_RX SERIAL_RX
 #endif
 
 //This one sets an array to set create the options to devices that have all GPIO available to use (except tft and SD Card)

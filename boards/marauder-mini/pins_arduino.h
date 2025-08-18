@@ -49,12 +49,20 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-#define RGB_LED 21
+#define HAS_RGB_LED 1
+#define RGB_LED 25
+#define LED_TYPE WS2812B
+#define LED_ORDER GRB
+#define LED_TYPE_IS_RGBW 0
+#define LED_COUNT 16
+#define LED_COLOR_STEP 15
+
 
 #define BAD_TX 21
 #define BAD_RX 22
 
 // SERIAL (GPS) dedicated pins
+
 #define SERIAL_TX 21
 #define SERIAL_RX 22
 
@@ -63,23 +71,25 @@ static const uint8_t ADC2 = 8;
 #define UP_BTN 36
 #define DW_BTN 35
 #define R_BTN 39
-#define L_BTN 13
+#define L_BTN 26
 #define HAS_5_BUTTONS
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
+
 
 #define LED -1
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-#define CC1101_GDO0_PIN -1
-#define CC1101_SS_PIN -1
+#define CC1101_GDO2_PIN -1
+#define CC1101_GDO0_PIN 13
+#define CC1101_SS_PIN 27
 #define CC1101_MOSI_PIN SPI_MOSI_PIN
 #define CC1101_SCK_PIN SPI_SCK_PIN
 #define CC1101_MISO_PIN SPI_MISO_PIN
 
-#define NRF24_CE_PIN -1
-#define NRF24_SS_PIN -1
+#define NRF24_CE_PIN 15
+#define NRF24_SS_PIN 14
 #define NRF24_MOSI_PIN SPI_MOSI_PIN
 #define NRF24_SCK_PIN SPI_SCK_PIN
 #define NRF24_MISO_PIN SPI_MISO_PIN

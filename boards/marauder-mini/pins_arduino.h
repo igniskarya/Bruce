@@ -71,7 +71,7 @@ static const uint8_t ADC2 = 8;
 #define UP_BTN 36
 #define DW_BTN 35
 #define R_BTN 39
-#define L_BTN 26
+#define L_BTN 12
 #define HAS_5_BUTTONS
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
@@ -81,7 +81,7 @@ static const uint8_t ADC2 = 8;
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-#define CC1101_GDO2_PIN -1
+#define CC1101_GDO2_PIN 2
 #define CC1101_GDO0_PIN 13
 #define CC1101_SS_PIN 27
 #define CC1101_MOSI_PIN SPI_MOSI_PIN

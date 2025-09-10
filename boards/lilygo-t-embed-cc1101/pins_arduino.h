@@ -235,7 +235,7 @@ static const uint8_t SCL = GROVE_SCL;
 #define USE_CC1101_VIA_SPI
 //#define CC1101_GDO2_PIN 44
 #define CC1101_SW1_PIN -1
-#define CC1101_SW0_PIN 44
+#define CC1101_SW0_PIN -1
 #define CC1101_GDO0_PIN 44
 #define CC1101_SS_PIN 43
 #define CC1101_MISO_PIN SPI_MISO_PIN

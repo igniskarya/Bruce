@@ -262,8 +262,8 @@ static const uint8_t SCL = GROVE_SCL;
 #define MCLK 39
 
 // Serial
-#define SERIAL_TX 43
-#define SERIAL_RX 44
+#define SERIAL_TX2 43
+#define SERIAL_RX2 44
 
 #define BAT_PIN 4
 

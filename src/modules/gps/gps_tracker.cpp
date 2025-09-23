@@ -10,9 +10,9 @@
 #include "core/display.h"
 #include "core/mykeyboard.h"
 #include "core/sd_functions.h"
-#include "current_year.h"
 
 #define MAX_WAIT 5000
+#define CURRENT_YEAR 2024
 
 GPSTracker::GPSTracker() { setup(); }
 
@@ -20,16 +20,10 @@ GPSTracker::~GPSTracker() {
     add_final_file_data();
     if (gpsConnected) end();
     ioExpander.turnPinOnOff(IO_EXP_GPS, LOW);
-    #ifdef USE_BOOST
-    PPM.disableOTG();
-#endif
 }
 
 void GPSTracker::setup() {
     ioExpander.turnPinOnOff(IO_EXP_GPS, HIGH);
-    #ifdef USE_BOOST /// ENABLE 5V OUTPUT
-    PPM.enableOTG();
-#endif
     display_banner();
     padprintln("Initializing...");
 
@@ -39,7 +33,7 @@ void GPSTracker::setup() {
 }
 
 bool GPSTracker::begin_gps() {
-    GPSserial.begin(bruceConfig.gpsBaudrate, SERIAL_8N1, GPS_SERIAL_RX, GPS_SERIAL_TX);
+    GPSserial.begin(bruceConfig.gpsBaudrate, SERIAL_8N1, SERIAL_RX, SERIAL_TX);
 
     int count = 0;
     padprintln("Waiting for GPS data");

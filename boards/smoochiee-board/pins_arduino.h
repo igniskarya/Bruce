@@ -89,7 +89,7 @@ static const uint8_t SCK = 18;
 #define SPI_SCK_PIN 13
 #define SPI_MOSI_PIN 12
 #define SPI_MISO_PIN 11
-#define SPI_SS_PIN 20
+#define SPI_SS_PIN 5
 
 // RGB LED
 
@@ -122,4 +122,5 @@ static const uint8_t SCK = 18;
 #define IO_EXP_CC_RX 7
 #define IO_EXP_CC_TX 12
 #endif /* Pins_Arduino_h */
+
 

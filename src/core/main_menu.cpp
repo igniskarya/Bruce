@@ -17,9 +17,9 @@ MainMenu::MainMenu() {
         &rfidMenu,
 #endif
         &irMenu,
-#if defined(FM_SI4713)
-        &fmMenu,
-#endif
+//#if defined(FM_SI4713)
+//        &fmMenu,
+//#endif
         &fileMenu,
         &gpsMenu,
 #if !defined(REMOVE_NRF_MENU)

@@ -49,7 +49,14 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-#define RGB_LED 25
+#define RGB_LED 2
+
+//#define HAS_RGB_LED 1
+//#define RGB_LED 2
+//#define LED_TYPE WS2812B
+//#define LED_ORDER GRB
+//#define LED_TYPE_IS_RGBW 0
+//#define LED_COUNT 8
 
 #define BAD_TX 21
 #define BAD_RX 22
@@ -90,7 +97,7 @@ static const uint8_t ADC2 = 8;
 #define FG 2
 
 #define HAS_SCREEN 1
-#define ROTATION 2
+#define ROTATION 0
 #define MINBRIGHT 160
 
 #define SDCARD_CS 4
@@ -99,7 +106,7 @@ static const uint8_t ADC2 = 8;
 #define SDCARD_MOSI 23
 
 #define GROVE_SDA 33
-#define GROVE_SCL 26
+#define GROVE_SCL 25
 
 #define SPI_SCK_PIN 18
 #define SPI_MISO_PIN 19

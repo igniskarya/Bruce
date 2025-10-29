@@ -10,8 +10,8 @@
 static const uint8_t TX = 43;
 static const uint8_t RX = 44;
 
-static const uint8_t TXD2 = 21;
-static const uint8_t RXD2 = 22;
+// static const uint8_t TXD2 = 21;
+// static const uint8_t RXD2 = 22;
 
 static const uint8_t SDA = 13;
 static const uint8_t SCL = 15;
@@ -49,21 +49,21 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
+// #define RGB_LED 2
+
+#define HAS_RGB_LED 1
 #define RGB_LED 2
-
-//#define HAS_RGB_LED 1
-//#define RGB_LED 2
-//#define LED_TYPE WS2812B
-//#define LED_ORDER GRB
-//#define LED_TYPE_IS_RGBW 0
-//#define LED_COUNT 8
-
-#define BAD_TX 21
-#define BAD_RX 22
+#define LED_TYPE WS2812B
+#define LED_ORDER GRB
+#define LED_TYPE_IS_RGBW 0
+#define LED_COUNT 8
 
 // SERIAL (GPS) dedicated pins
-#define SERIAL_TX 21
-#define SERIAL_RX 22
+#define BAD_TX 43
+#define BAD_RX 44
+
+#define SERIAL_RX 44
+#define SERIAL_TX 43
 
 #define HAS_BTN 1
 #define SEL_BTN 34
@@ -97,13 +97,13 @@ static const uint8_t ADC2 = 8;
 #define FG 2
 
 #define HAS_SCREEN 1
-#define ROTATION 0
+#define ROTATION 1
 #define MINBRIGHT 160
 
-#define SDCARD_CS 4
-#define SDCARD_SCK 18
-#define SDCARD_MISO 19
-#define SDCARD_MOSI 23
+#define SDCARD_CS 15
+#define SDCARD_SCK 14
+#define SDCARD_MISO 12
+#define SDCARD_MOSI 13
 
 #define GROVE_SDA 33
 #define GROVE_SCL 25

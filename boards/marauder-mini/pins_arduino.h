@@ -100,10 +100,10 @@ static const uint8_t ADC2 = 8;
 #define ROTATION 1
 #define MINBRIGHT 160
 
-#define SDCARD_CS 15
-#define SDCARD_SCK 14
-#define SDCARD_MISO 12
-#define SDCARD_MOSI 13
+#define SDCARD_CS 4
+#define SDCARD_SCK 18
+#define SDCARD_MISO 19
+#define SDCARD_MOSI 23
 
 #define GROVE_SDA 33
 #define GROVE_SCL 25

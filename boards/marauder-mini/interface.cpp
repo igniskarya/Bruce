@@ -12,6 +12,7 @@ void _setup_gpio() {
     pinMode(DW_BTN, INPUT);
     pinMode(R_BTN, INPUT);
     pinMode(L_BTN, INPUT);
+    pinMode(TFT_BL, OUTPUT);
 
     bruceConfig.colorInverted = 0;
     bruceConfig.rotation = 0; // portrait mode for Phantom

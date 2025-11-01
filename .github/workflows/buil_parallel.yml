@@ -56,7 +56,7 @@ jobs:
           #- { env: "Awok-Mini",                       family: "ESP32",}
           - { env: "Marauder-v7",                     family: "ESP32",}
           #- { env: "LAUNCHER_Marauder-v7",            family: "ESP32",}
-          #- { env: "Marauder-V4-V6",                  family: "ESP32",}
+          - { env: "Marauder-V4-V6",                  family: "ESP32",}
           #- { env: "Marauder-v61",                    family: "ESP32",}
           #- { env: "LAUNCHER_Marauder-V4-V6",         family: "ESP32",}
           #- { env: "LAUNCHER_Marauder-v61",           family: "ESP32",}

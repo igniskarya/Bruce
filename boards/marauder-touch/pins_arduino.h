@@ -10,8 +10,8 @@
 static const uint8_t TX = 43;
 static const uint8_t RX = 44;
 
-static const uint8_t TXD2 = 1;
-static const uint8_t RXD2 = 2;
+// static const uint8_t TXD2 = 21;
+// static const uint8_t RXD2 = 22;
 
 static const uint8_t SDA = 13;
 static const uint8_t SCL = 15;
@@ -49,43 +49,31 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-#define RGB_LED 21
+#define RGB_LED 2
 
-#define BAD_TX 4
-#define BAD_RX 13
+//#define HAS_RGB_LED 1
+//#define RGB_LED 2
+//#define LED_TYPE WS2812B
+//#define LED_ORDER GRB
+//#define LED_TYPE_IS_RGBW 0
+//#define LED_COUNT 8
 
 // SERIAL (GPS) dedicated pins
-#define SERIAL_TX 4
-#define SERIAL_RX 13
+#define BAD_TX 43
+#define BAD_RX 44
 
-#define HAS_BTN 0
+#define SERIAL_RX 44
+#define SERIAL_TX 43
+
+#define HAS_BTN 1
+#define SEL_BTN 34
+#define UP_BTN 36
+#define DW_BTN 35
+#define R_BTN 39
+#define L_BTN 26
+#define HAS_5_BUTTONS
 #define BTN_ALIAS "\"Ok\""
-#define BTN_PIN 0
 #define BTN_ACT LOW
-
-#define LED -1
-#define LED_ON HIGH
-#define LED_OFF LOW
-
-#define CC1101_GDO0_PIN -1
-#define CC1101_SS_PIN -1
-#define CC1101_MOSI_PIN SPI_MOSI_PIN
-#define CC1101_SCK_PIN SPI_SCK_PIN
-#define CC1101_MISO_PIN SPI_MISO_PIN
-
-#define NRF24_CE_PIN -1
-#define NRF24_SS_PIN -1
-#define NRF24_MOSI_PIN SPI_MOSI_PIN
-#define NRF24_SCK_PIN SPI_SCK_PIN
-#define NRF24_MISO_PIN SPI_MISO_PIN
-
-#define FP 1
-#define FM 2
-#define FG 3
-
-#define HAS_SCREEN 1
-#define ROTATION 3
-#define MINBRIGHT 160
 
 #define USER_SETUP_LOADED 1
 #define ILI9341_DRIVER 1
@@ -101,16 +89,40 @@ static const uint8_t ADC2 = 8;
 #define SPI_FREQUENCY 40000000
 #define SPI_READ_FREQUENCY 16000000
 #define SPI_TOUCH_FREQUENCY 2500000
-#define TOUCH_CS 21
-#define HAS_TOUCH 1
+#define TOUCH_CS -1
 
-// #define SDCARD_CS 12
+#define LED -1
+#define LED_ON HIGH
+#define LED_OFF LOW
+
+#define CC1101_GDO2_PIN 14
+#define CC1101_GDO0_PIN 15
+#define CC1101_SS_PIN 27
+#define CC1101_MOSI_PIN SPI_MOSI_PIN
+#define CC1101_SCK_PIN SPI_SCK_PIN
+#define CC1101_MISO_PIN SPI_MISO_PIN
+
+#define NRF24_CE_PIN 15
+#define NRF24_SS_PIN 27
+#define NRF24_MOSI_PIN SPI_MOSI_PIN
+#define NRF24_SCK_PIN SPI_SCK_PIN
+#define NRF24_MISO_PIN SPI_MISO_PIN
+
+#define FP 1
+#define FM 1
+#define FG 2
+
+#define HAS_SCREEN 1
+#define ROTATION 1
+#define MINBRIGHT 160
+
+#define SDCARD_CS 4
 #define SDCARD_SCK 18
 #define SDCARD_MISO 19
 #define SDCARD_MOSI 23
 
 #define GROVE_SDA 33
-#define GROVE_SCL 22
+#define GROVE_SCL 25
 
 #define SPI_SCK_PIN 18
 #define SPI_MISO_PIN 19
@@ -118,3 +130,4 @@ static const uint8_t ADC2 = 8;
 #define SPI_SS_PIN 1
 
 #endif /* Pins_Arduino_h */
+

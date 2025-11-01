@@ -1,8 +1,5 @@
 #include "core/powerSave.h"
-#include "core/utils.h"
-#include <CYD28_TouchscreenR.h>
 #include <interface.h>
-CYD28_TouchR touch(320, 240);
 
 /***************************************************************************************
 ** Function name: _setup_gpio()
@@ -10,9 +7,15 @@ CYD28_TouchR touch(320, 240);
 ** Description:   initial setup for the device
 ***************************************************************************************/
 void _setup_gpio() {
+    pinMode(UP_BTN, INPUT);
+    pinMode(SEL_BTN, INPUT);
+    pinMode(DW_BTN, INPUT);
+    pinMode(R_BTN, INPUT);
+    pinMode(L_BTN, INPUT);
+    pinMode(TFT_BL, OUTPUT);
+
     bruceConfig.colorInverted = 0;
     bruceConfig.rotation = 0; // portrait mode for Phantom
-    pinMode(TFT_BL, OUTPUT);
 }
 
 /***************************************************************************************
@@ -20,12 +23,7 @@ void _setup_gpio() {
 ** Location: main.cpp
 ** Description:   second stage gpio setup to make a few functions work
 ***************************************************************************************/
-void _post_setup_gpio() {
-    if (!touch.begin(&tft.getSPIinstance())) {
-        Serial.println("Touch IC not Started");
-        log_i("Touch IC not Started");
-    } else Serial.println("Touch IC Started");
-}
+void _post_setup_gpio() { pinMode(TFT_BL, OUTPUT); }
 
 /***************************************************************************************
 ** Function name: getBattery()
@@ -40,8 +38,14 @@ int getBattery() { return 0; }
 ** set brightness value
 **********************************************************************/
 void _setBrightness(uint8_t brightval) {
-    if (brightval > 5) digitalWrite(TFT_BL, HIGH);
-    else digitalWrite(TFT_BL, LOW);
+    pinMode(TFT_BL, OUTPUT);
+    if (brightval > 5) {
+        digitalWrite(TFT_BL, LOW);
+        digitalWrite(TFT_BL, HIGH);
+    } else {
+        digitalWrite(TFT_BL, HIGH);
+        digitalWrite(TFT_BL, LOW);
+    }
 }
 
 /*********************************************************************
@@ -49,38 +53,42 @@ void _setBrightness(uint8_t brightval) {
 ** Handles the variables PrevPress, NextPress, SelPress, AnyKeyPress and EscPress
 **********************************************************************/
 void InputHandler(void) {
-    static long tm = millis();
-    if (millis() - tm > 300 || LongPress) { // don´t allow multiple readings in less than 200ms
-        if (touch.touched()) {
-            auto t = touch.getPointScaled();
-            t = touch.getPointScaled();
-            tm = millis();
-            if (bruceConfig.rotation == 3) {
-                t.y = (tftHeight + 20) - t.y;
-                t.x = tftWidth - t.x;
-            }
-            if (bruceConfig.rotation == 0) {
-                int tmp = t.x;
-                t.x = tftWidth - t.y;
-                t.y = tmp;
-            }
-            if (bruceConfig.rotation == 2) {
-                int tmp = t.x;
-                t.x = t.y;
-                t.y = (tftHeight + 20) - tmp;
-            }
-            Serial.printf("Touched at x=%d, y=%d, rot=%d\n", t.x, t.y, bruceConfig.rotation);
+    static unsigned long tm = millis();
+    static unsigned long esc_tm = millis();
+    static bool esc_armed = false;
+    if (!(millis() - tm > 200 || LongPress)) return;
 
-            if (!wakeUpScreen()) AnyKeyPress = true;
-            else return;
-
-            // Touch point global variable
-            touchPoint.x = t.x;
-            touchPoint.y = t.y;
-            touchPoint.pressed = true;
-            touchHeatMap(touchPoint);
-        } else touchPoint.pressed = false;
+    bool u = digitalRead(UP_BTN);
+    bool d = digitalRead(DW_BTN);
+    bool r = digitalRead(R_BTN);
+    bool l = digitalRead(L_BTN);
+    bool s = digitalRead(SEL_BTN);
+    if (!s || !u || !d || !r || !l) {
+        tm = millis();
+        if (!wakeUpScreen()) AnyKeyPress = true;
+        else return;
     }
+    if (!l && !s) {
+        EscPress = true;
+        return;
+    }
+    if (!l) {
+        PrevPress = true;
+        if (esc_armed == false) {
+            esc_tm = millis();
+            esc_armed = true;
+        }
+    }
+    if (esc_armed && millis() - esc_tm > 1000) {
+        esc_armed = false;
+        esc_tm = millis();
+        PrevPress = false;
+        EscPress = true;
+    }
+    if (!r) NextPress = true;
+    if (!u) UpPress = true;
+    if (!d) DownPress = true;
+    if (!s) SelPress = true;
 }
 
 /*********************************************************************

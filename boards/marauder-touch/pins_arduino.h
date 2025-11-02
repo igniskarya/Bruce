@@ -95,7 +95,7 @@ static const uint8_t ADC2 = 8;
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-#define CC1101_GDO2_PIN 14
+#define CC1101_GDO2_PIN 22
 #define CC1101_GDO0_PIN 15
 #define CC1101_SS_PIN 27
 #define CC1101_MOSI_PIN SPI_MOSI_PIN
@@ -116,10 +116,10 @@ static const uint8_t ADC2 = 8;
 #define ROTATION 1
 #define MINBRIGHT 160
 
-#define SDCARD_CS 4
-#define SDCARD_SCK 18
-#define SDCARD_MISO 19
-#define SDCARD_MOSI 23
+#define SDCARD_CS 21
+#define SDCARD_SCK 14
+#define SDCARD_MISO 12
+#define SDCARD_MOSI 13
 
 #define GROVE_SDA 33
 #define GROVE_SCL 25

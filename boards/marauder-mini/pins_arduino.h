@@ -75,11 +75,27 @@ static const uint8_t ADC2 = 8;
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
 
+#define USER_SETUP_LOADED 1
+#define ILI9341_DRIVER 1
+#define TFT_MISO 19
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS 17
+#define TFT_DC 16
+#define TFT_RST 5
+#define TFT_BL 32
+#define TFT_BACKLIGHT_ON HIGH
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 40000000
+#define SPI_READ_FREQUENCY 16000000
+#define SPI_TOUCH_FREQUENCY 2500000
+#define TOUCH_CS -1
+
 #define LED -1
 #define LED_ON HIGH
 #define LED_OFF LOW
 
-#define CC1101_GDO2_PIN 14
+#define CC1101_GDO2_PIN 22
 #define CC1101_GDO0_PIN 15
 #define CC1101_SS_PIN 27
 #define CC1101_MOSI_PIN SPI_MOSI_PIN
@@ -100,10 +116,10 @@ static const uint8_t ADC2 = 8;
 #define ROTATION 1
 #define MINBRIGHT 160
 
-#define SDCARD_CS 4
-#define SDCARD_SCK 18
-#define SDCARD_MISO 19
-#define SDCARD_MOSI 23
+#define SDCARD_CS 21
+#define SDCARD_SCK 14
+#define SDCARD_MISO 12
+#define SDCARD_MOSI 13
 
 #define GROVE_SDA 33
 #define GROVE_SCL 25

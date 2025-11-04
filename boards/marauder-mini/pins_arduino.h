@@ -76,21 +76,21 @@ static const uint8_t ADC2 = 8;
 #define BTN_ACT LOW
 
 // define marauder v7
-//#define USER_SETUP_LOADED 1
-//#define ILI9341_DRIVER 1
-//#define TFT_MISO 19
-//#define TFT_MOSI 23
-//#define TFT_SCLK 18
-//#define TFT_CS 17
-//#define TFT_DC 16
-//#define TFT_RST 5
-//#define TFT_BL 32
-//#define TFT_BACKLIGHT_ON HIGH
-//#define SMOOTH_FONT 1
-//#define SPI_FREQUENCY 40000000
-//#define SPI_READ_FREQUENCY 16000000
-//#define SPI_TOUCH_FREQUENCY 2500000
-//#define TOUCH_CS -1
+#define USER_SETUP_LOADED 1
+#define ILI9341_DRIVER 1
+#define TFT_MISO 19
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS 17
+#define TFT_DC 16
+#define TFT_RST 5
+#define TFT_BL 32
+#define TFT_BACKLIGHT_ON HIGH
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 40000000
+#define SPI_READ_FREQUENCY 16000000
+#define SPI_TOUCH_FREQUENCY 2500000
+#define TOUCH_CS -1
 
 #define LED -1
 #define LED_ON HIGH
@@ -109,12 +109,12 @@ static const uint8_t ADC2 = 8;
 #define NRF24_SCK_PIN SPI_SCK_PIN
 #define NRF24_MISO_PIN SPI_MISO_PIN
 
-#define FP 1
-#define FM 1
+#define FP 2
+#define FM 2
 #define FG 2
 
 #define HAS_SCREEN 1
-#define ROTATION 1
+#define ROTATION 3
 #define MINBRIGHT 160
 
 #define SDCARD_CS 21

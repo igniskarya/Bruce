@@ -59,11 +59,11 @@ static const uint8_t ADC2 = 8;
 #define LED_COUNT 16
 
 // SERIAL (GPS) dedicated pins
-#define BAD_TX 1
-#define BAD_RX 3
+#define BAD_TX 43
+#define BAD_RX 44
 
-#define SERIAL_RX 3
-#define SERIAL_TX 1
+#define SERIAL_RX 44
+#define SERIAL_TX 43
 
 #define HAS_BTN 1
 #define SEL_BTN 34
@@ -75,6 +75,21 @@ static const uint8_t ADC2 = 8;
 #define BTN_ALIAS "\"Ok\""
 #define BTN_ACT LOW
 
+#define USER_SETUP_LOADED 1
+#define ILI9341_DRIVER 1
+#define TFT_MISO 19
+#define TFT_MOSI 23
+#define TFT_SCLK 18
+#define TFT_CS 17
+#define TFT_DC 16
+#define TFT_RST 5
+#define TFT_BL 32
+#define TFT_BACKLIGHT_ON HIGH
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 40000000
+#define SPI_READ_FREQUENCY 16000000
+#define SPI_TOUCH_FREQUENCY 2500000
+#define TOUCH_CS -1
 
 #define LED -1
 #define LED_ON HIGH
@@ -98,7 +113,7 @@ static const uint8_t ADC2 = 8;
 #define FG 2
 
 #define HAS_SCREEN 1
-#define ROTATION 3
+#define ROTATION 1
 #define MINBRIGHT 160
 
 #define SDCARD_CS 21

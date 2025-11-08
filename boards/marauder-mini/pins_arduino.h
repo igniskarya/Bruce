@@ -49,14 +49,14 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-//#define RGB_LED 2
-
-#define HAS_RGB_LED 1
 #define RGB_LED 2
-#define LED_TYPE WS2812B
-#define LED_ORDER GRB
-#define LED_TYPE_IS_RGBW 0
-#define LED_COUNT 16
+
+//#define HAS_RGB_LED 1
+//#define RGB_LED 2
+//#define LED_TYPE WS2812B
+//#define LED_ORDER GRB
+//#define LED_TYPE_IS_RGBW 0
+//#define LED_COUNT 16
 
 // SERIAL (GPS) dedicated pins
 #define BAD_TX 43
@@ -88,7 +88,7 @@ static const uint8_t ADC2 = 8;
 #define SMOOTH_FONT 1
 #define SPI_FREQUENCY 40000000
 #define SPI_READ_FREQUENCY 16000000
-#define SPI_TOUCH_FREQUENCY 2500000
+//#define SPI_TOUCH_FREQUENCY 2500000
 #define TOUCH_CS -1
 
 #define LED -1

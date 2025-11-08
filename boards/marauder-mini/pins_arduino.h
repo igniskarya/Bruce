@@ -58,6 +58,8 @@ static const uint8_t ADC2 = 8;
 #define LED_TYPE_IS_RGBW 0
 #define LED_COUNT 16
 
+#define LED_COLOR_STEP 15
+
 // SERIAL (GPS) dedicated pins
 #define BAD_TX 43
 #define BAD_RX 44

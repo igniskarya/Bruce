@@ -61,11 +61,11 @@ static const uint8_t ADC2 = 8;
 #define LED_COLOR_STEP 15
 
 // SERIAL (GPS) dedicated pins
-#define BAD_TX 43
-#define BAD_RX 44
+#define BAD_TX 1
+#define BAD_RX 3
 
-#define SERIAL_RX 44
-#define SERIAL_TX 43
+#define SERIAL_RX 3
+#define SERIAL_TX 1
 
 #define HAS_BTN 1
 #define SEL_BTN 34
@@ -93,7 +93,9 @@ static const uint8_t ADC2 = 8;
 //#define SPI_TOUCH_FREQUENCY 2500000
 //#define TOUCH_CS -1
 
-#define LED -1
+
+#define RXLED 16
+#define LED 17
 #define LED_ON HIGH
 #define LED_OFF LOW
 

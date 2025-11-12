@@ -216,10 +216,10 @@ void begin_tft() {
  *********************************************************************/
 void boot_screen() {
     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
-    tft.setTextSize(2);
+    tft.setTextSize(3);
     tft.drawPixel(0, 0, bruceConfig.bgColor);
     tft.drawCentreString("DOYA VIVO", tftWidth / 2, 10, 1);
-    tft.setTextSize(1);
+    tft.setTextSize(2);
     tft.drawCentreString("MARAUDER OLED", tftWidth / 2, 35, 1);
     tft.setTextSize(FM);
     tft.drawCentreString(
@@ -515,6 +515,7 @@ void loop() {
     vTaskDelay(10 / portTICK_PERIOD_MS);
 }
 #endif
+
 
 
 

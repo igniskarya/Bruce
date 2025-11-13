@@ -109,9 +109,9 @@ static const uint8_t ADC2 = 8;
 #define TFT_CS -1
 //#define TOUCH_CS -1 // SDCARD_CS to make sure SDCard works
 #define SMOOTH_FONT 1
-#define SPI_FREQUENCY 20000000
+#define SPI_FREQUENCY 40000000
 #define SPI_READ_FREQUENCY 20000000
-#define SPI_TOUCH_FREQUENCY 2500000
+//#define SPI_TOUCH_FREQUENCY 2500000
 
 #define RXLED 16
 #define LED 17

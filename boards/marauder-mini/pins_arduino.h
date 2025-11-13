@@ -93,6 +93,25 @@ static const uint8_t ADC2 = 8;
 //#define SPI_TOUCH_FREQUENCY 2500000
 //#define TOUCH_CS -1
 
+// Setting Marauder Mini ST7789 TFT 240 x 240
+#define USER_SETUP_LOADED 1
+#define ST7789_DRIVER 1
+#define TFT_RGB_ORDER 0
+#define TFT_WIDTH 240
+#define TFT_HEIGHT 240
+#define TFT_BACKLIGHT_ON 1
+#define TFT_BL -1
+#define TFT_RST 4
+#define TFT_DC 2
+#define TFT_MISO -1
+#define TFT_SDA 23
+#define TFT_SCLK 18
+#define TFT_CS -1
+//#define TOUCH_CS -1 // SDCARD_CS to make sure SDCard works
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 20000000
+#define SPI_READ_FREQUENCY 20000000
+#define SPI_TOUCH_FREQUENCY 2500000
 
 #define RXLED 16
 #define LED 17
@@ -117,7 +136,7 @@ static const uint8_t ADC2 = 8;
 #define FG 2
 
 #define HAS_SCREEN 1
-#define ROTATION 1
+#define ROTATION 3
 #define MINBRIGHT 160
 
 #define SDCARD_CS 21

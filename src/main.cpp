@@ -216,11 +216,11 @@ void begin_tft() {
  *********************************************************************/
 void boot_screen() {
     tft.setTextColor(bruceConfig.priColor, bruceConfig.bgColor);
-    tft.setTextSize(3);
+    tft.setTextSize(2);
     tft.drawPixel(0, 0, bruceConfig.bgColor);
     tft.drawCentreString("DOYA VIVO", tftWidth / 2, 10, 1);
-    tft.setTextSize(2);
-    tft.drawCentreString("MARAUDER OLED", tftWidth / 2, 50, 1);
+    tft.setTextSize(1);
+    tft.drawCentreString("MARAUDER MINI", tftWidth / 2, 35, 1);
     tft.setTextSize(FM);
     tft.drawCentreString(
         "PREDATORY FIRMWARE", tftWidth / 2, tftHeight + 2, 1
@@ -515,6 +515,7 @@ void loop() {
     vTaskDelay(10 / portTICK_PERIOD_MS);
 }
 #endif
+
 
 
 

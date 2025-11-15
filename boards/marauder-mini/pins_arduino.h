@@ -17,10 +17,10 @@ static const uint8_t SDA = 13;
 static const uint8_t SCL = 15;
 
 // Modified elsewhere
-static const uint8_t sS = -1;
-static const uint8_t MOSI = -1;
-static const uint8_t MISO = -1;
-static const uint8_t SCK = -1;
+static const uint8_t SS = 21;
+static const uint8_t MOSI = 13;
+static const uint8_t MISO = 12;
+static const uint8_t SCK = 14;
 
 static const uint8_t G0 = 0;
 static const uint8_t G1 = 1;
@@ -130,6 +130,6 @@ static const uint8_t ADC2 = 8;
 #define SPI_SCK_PIN 18
 #define SPI_MISO_PIN 19
 #define SPI_MOSI_PIN 23
-#define SPI_SS_PIN 1
+//#define SPI_SS_PIN 1
 
 #endif /* Pins_Arduino_h */

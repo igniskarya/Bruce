@@ -130,6 +130,6 @@ static const uint8_t ADC2 = 8;
 #define SPI_SCK_PIN 18
 #define SPI_MISO_PIN 19
 #define SPI_MOSI_PIN 23
-//#define SPI_SS_PIN 1
+#define SPI_SS_PIN 21
 
 #endif /* Pins_Arduino_h */

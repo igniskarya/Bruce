@@ -18,9 +18,9 @@ static const uint8_t SCL = 15;
 
 // Modified elsewhere
 static const uint8_t SS = 21;
-static const uint8_t MOSI = 13;
-static const uint8_t MISO = 12;
-static const uint8_t SCK = 14;
+static const uint8_t MOSI = 23;
+static const uint8_t MISO = 19;
+static const uint8_t SCK = 18;
 
 static const uint8_t G0 = 0;
 static const uint8_t G1 = 1;
@@ -120,9 +120,9 @@ static const uint8_t ADC2 = 8;
 #define MINBRIGHT 160
 
 //#define SDCARD_CS 21
-#define SDCARD_SCK 14
-#define SDCARD_MISO 12
-#define SDCARD_MOSI 13
+#define SDCARD_SCK 18
+#define SDCARD_MISO 19
+#define SDCARD_MOSI 23
 
 #define GROVE_SDA 33
 #define GROVE_SCL 25

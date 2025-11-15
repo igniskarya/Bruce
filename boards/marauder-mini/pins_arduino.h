@@ -17,10 +17,10 @@ static const uint8_t SDA = 13;
 static const uint8_t SCL = 15;
 
 // Modified elsewhere
-static const uint8_t SS = 21;
-static const uint8_t MOSI = 13;
-static const uint8_t MISO = 12;
-static const uint8_t SCK = 14;
+static const uint8_t sS = -1;
+static const uint8_t MOSI = -1;
+static const uint8_t MISO = -1;
+static const uint8_t SCK = -1;
 
 static const uint8_t G0 = 0;
 static const uint8_t G1 = 1;
@@ -99,13 +99,13 @@ static const uint8_t ADC2 = 8;
 #define LED_OFF LOW
 
 #define CC1101_GDO2_PIN 22
-#define CC1101_GDO0_PIN 21
+#define CC1101_GDO0_PIN 15
 #define CC1101_SS_PIN 27
 #define CC1101_MOSI_PIN SPI_MOSI_PIN
 #define CC1101_SCK_PIN SPI_SCK_PIN
 #define CC1101_MISO_PIN SPI_MISO_PIN
 
-#define NRF24_CE_PIN 21
+#define NRF24_CE_PIN 15
 #define NRF24_SS_PIN 27
 #define NRF24_MOSI_PIN SPI_MOSI_PIN
 #define NRF24_SCK_PIN SPI_SCK_PIN
@@ -119,7 +119,7 @@ static const uint8_t ADC2 = 8;
 #define ROTATION 3
 #define MINBRIGHT 160
 
-#define SDCARD_CS 21
+//#define SDCARD_CS 21
 #define SDCARD_SCK 14
 #define SDCARD_MISO 12
 #define SDCARD_MOSI 13

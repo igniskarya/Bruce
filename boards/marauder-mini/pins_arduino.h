@@ -7,20 +7,18 @@
 #define USB_VID 0x303a
 #define USB_PID 0x1001
 
-static const uint8_t TX = 43;
-static const uint8_t RX = 44;
+static const uint8_t TX = 1;
+static const uint8_t RX = 3;
 
-static const uint8_t TXD2 = 1;
-static const uint8_t RXD2 = 2;
 
-static const uint8_t SDA = 13;
-static const uint8_t SCL = 15;
+static const uint8_t SDA = 33;
+static const uint8_t SCL = 25;
 
 // Modified elsewhere
-static const uint8_t SS = -1;
-static const uint8_t MOSI = -1;
-static const uint8_t MISO = -1;
-static const uint8_t SCK = -1;
+static const uint8_t SS = 5;
+static const uint8_t MOSI = 23;
+static const uint8_t MISO = 19;
+static const uint8_t SCK = 18;
 
 static const uint8_t G0 = 0;
 static const uint8_t G1 = 1;
@@ -49,60 +47,14 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
-#define RGB_LED 21
+#define HAS_RGB_LED 1
+#define RGB_LED 32
+#define LED_TYPE WS2812B
+#define LED_ORDER GRB
+#define LED_TYPE_IS_RGBW 0
+#define LED_COUNT 16
 
-#define BAD_TX 21
-#define BAD_RX 22
+#define LED_COLOR_STEP 15
 
-// SERIAL (GPS) dedicated pins
-#define SERIAL_TX 21
-#define SERIAL_RX 22
-
-#define HAS_BTN 1
-#define SEL_BTN 34
-#define UP_BTN 36
-#define DW_BTN 35
-#define R_BTN 39
-#define L_BTN 13
-#define HAS_5_BUTTONS
-#define BTN_ALIAS "\"Ok\""
-#define BTN_ACT LOW
-
-#define LED -1
-#define LED_ON HIGH
-#define LED_OFF LOW
-
-#define CC1101_GDO0_PIN -1
-#define CC1101_SS_PIN -1
-#define CC1101_MOSI_PIN SPI_MOSI_PIN
-#define CC1101_SCK_PIN SPI_SCK_PIN
-#define CC1101_MISO_PIN SPI_MISO_PIN
-
-#define NRF24_CE_PIN -1
-#define NRF24_SS_PIN -1
-#define NRF24_MOSI_PIN SPI_MOSI_PIN
-#define NRF24_SCK_PIN SPI_SCK_PIN
-#define NRF24_MISO_PIN SPI_MISO_PIN
-
-#define FP 1
-#define FM 1
-#define FG 2
-
-#define HAS_SCREEN 1
-#define ROTATION 0
-#define MINBRIGHT 160
-
-#define SDCARD_CS 4
-#define SDCARD_SCK 18
-#define SDCARD_MISO 19
-#define SDCARD_MOSI 23
-
-#define GROVE_SDA 33
-#define GROVE_SCL 26
-
-#define SPI_SCK_PIN 18
-#define SPI_MISO_PIN 19
-#define SPI_MOSI_PIN 23
-#define SPI_SS_PIN 1
 
 #endif /* Pins_Arduino_h */

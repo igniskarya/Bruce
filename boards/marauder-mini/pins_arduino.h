@@ -47,6 +47,16 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
+#define HAS_BTN 1
+#define BTN_ALIAS "\"OK\""
+#define HAS_5_BUTTONS
+#define SEL_BTN 34
+#define UP_BTN 36
+#define DW_BTN 35
+#define R_BTN 39
+#define L_BTN 26
+#define BTN_ACT LOW
+
 #define HAS_RGB_LED 1
 #define RGB_LED 32
 #define LED_TYPE WS2812B

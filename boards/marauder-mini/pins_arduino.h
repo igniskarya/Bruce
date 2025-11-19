@@ -47,6 +47,13 @@ static const uint8_t G46 = 46;
 static const uint8_t ADC1 = 7;
 static const uint8_t ADC2 = 8;
 
+#define BAD_TX 1
+#define BAD_RX 3
+
+// SERIAL (GPS) dedicated pins
+#define SERIAL_TX 1
+#define SERIAL_RX 3
+
 #define HAS_BTN 1
 #define BTN_ALIAS "\"OK\""
 #define HAS_5_BUTTONS
@@ -65,6 +72,11 @@ static const uint8_t ADC2 = 8;
 #define LED_COUNT 16
 
 #define LED_COLOR_STEP 15
+
+#define FP 2
+#define FM 2
+#define FG 2
+
 
 
 #endif /* Pins_Arduino_h */

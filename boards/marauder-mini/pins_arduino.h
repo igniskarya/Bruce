@@ -59,6 +59,25 @@ static const uint8_t ADC2 = 8;
 #define LED_ON HIGH
 #define LED_OFF LOW
 
+#define USER_SETUP_LOADED 1
+#define ST7789_DRIVER 1
+#define USE_HSPI_PORT 1
+#define TFT_HEIGHT 240
+#define TFT_WIDTH 240
+#define TFT_MISO -1
+#define TFT_SDA 13
+#define TFT_SCL 14
+#define TFT_CS -1
+#define TFT_DC 2
+#define TFT_RST 4
+#define TFT_BL -1
+#define TFT_BACKLIGHT_ON HIGH
+#define SMOOTH_FONT 1
+#define SPI_FREQUENCY 40000000
+#define SPI_READ_FREQUENCY 16000000
+	;-DSPI_TOUCH_FREQUENCY=2500000
+#define TOUCH_CS -1
+
 #define HAS_SCREEN 1
 #define ROTATION 3
 #define MINBRIGHT 160

@@ -60,7 +60,7 @@ static const uint8_t ADC2 = 8;
 #define LED_OFF LOW
 
 #define HAS_SCREEN 1
-#define ROTATION 1
+#define ROTATION 3
 #define MINBRIGHT 160
 
 

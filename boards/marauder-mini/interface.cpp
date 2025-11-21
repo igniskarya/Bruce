@@ -13,6 +13,16 @@ void _setup_gpio() {
     pinMode(R_BTN, INPUT);
     pinMode(L_BTN, INPUT);
 
+    pinMode(CC1101_SS_PIN, OUTPUT);
+    pinMode(NRF24_SS_PIN, OUTPUT);
+
+    digitalWrite(CC1101_SS_PIN, HIGH);
+    digitalWrite(NRF24_SS_PIN, HIGH);
+    // Starts SPI instance for CC1101 and NRF24 with CS pins blocking communication at start
+
+    bruceConfig.rfModule = CC1101_SPI_MODULE;
+    bruceConfig.irRx = RXLED;
+
     bruceConfig.colorInverted = 0;
     bruceConfig.rotation = 0; // portrait mode for Phantom
 }

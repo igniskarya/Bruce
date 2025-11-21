@@ -80,8 +80,8 @@ static const uint8_t ADC2 = 8;
 #define USER_SETUP_LOADED 1
 #define ST7789_DRIVER 1
 #define TFT_MISO -1
-#define TFT_SDA 23
-#define TFT_SCL 18
+#define TFT_SDA 13
+#define TFT_SCL 14
 #define TFT_CS -1
 #define TFT_DC 2
 #define TFT_RST 4
